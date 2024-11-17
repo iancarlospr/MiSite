@@ -6,6 +6,9 @@
   body {
     @apply bg-black text-zinc-100 cursor-default;
   }
+  html, body {
+    @apply h-screen overflow-hidden;
+  }
 }
 
 @layer utilities {

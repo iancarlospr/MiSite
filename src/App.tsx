@@ -7,7 +7,7 @@ import profileImage from './assets/profile.jpg';
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-black overflow-hidden relative">
+    <main className="h-screen flex flex-col items-center justify-center overflow-hidden bg-neutral-950 text-neutral-50">
       {/* Animated gradient background */}
       <div className="fixed inset-0 animate-gradient bg-gradient-to-br from-charcoal-900 via-black to-charcoal-800/20" />
       
@@ -78,7 +78,7 @@ function App() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </main>
   );
 }
 
