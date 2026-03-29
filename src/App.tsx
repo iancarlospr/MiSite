@@ -207,7 +207,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative h-screen bg-black text-white overflow-hidden">
       {/* Background layers */}
       <div className="noise-bg animate-noise" />
       <div className="dot-matrix" />
@@ -216,7 +216,7 @@ export default function App() {
       <GlitchCanvas />
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-start min-h-screen px-6 py-12 md:py-20">
+      <main className="relative z-10 flex flex-col items-center justify-center h-screen px-6 py-6">
         <div className="w-full max-w-md mx-auto flex flex-col items-center">
 
           {/* Profile Image Section */}
@@ -341,17 +341,17 @@ export default function App() {
               className="text-[10px] tracking-[0.4em] uppercase text-white/15"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
-              SYS.LINK//ACTIVE
+              MarTech//ACTIVE
             </p>
           </div>
 
           {/* Matrix data fragments at bottom */}
           <div className="mt-8 w-full overflow-hidden opacity-10">
             <p
-              className="text-[8px] tracking-widest text-white/40 text-center break-all"
+              className="text-[8px] tracking-widest text-white/40 text-center whitespace-nowrap"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
-              01001001 01000001 01001110 ░░▒▓█ NODE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓
+              01001001 01000001 01001110 ░░▒▓█ TECHIE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓
             </p>
           </div>
         </div>
