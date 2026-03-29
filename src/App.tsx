@@ -185,7 +185,7 @@ const links = [
     label: 'Personal Website',
     url: 'https://iancarlospr.github.io/rrg22agency/',
     icon: <GlobeIcon />,
-    sub: 'Portfolio & Services',
+    sub: 'Portfolio & Work',
   },
   {
     label: 'GitHub Page',
@@ -213,13 +213,12 @@ export default function App() {
       <GlitchCanvas />
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col h-dvh px-6 py-4">
-        {/* Center group — profile, name, links */}
-        <div className="flex-1 flex flex-col items-center justify-center w-full max-w-md mx-auto">
+      <main className="relative z-10 flex flex-col h-dvh px-6">
 
-          {/* Profile Image Section */}
+        {/* TOP — Profile, name, headline */}
+        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-3 md:gap-4 pt-8 md:pt-12">
           <div
-            className={`profile-container mb-2 md:mb-6 transition-all duration-1000 ${
+            className={`profile-container transition-all duration-1000 ${
               loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -241,8 +240,7 @@ export default function App() {
             <PixelParticles />
           </div>
 
-          {/* Name */}
-          <div className="animate-fade-in animate-delay-2 mb-1 text-center">
+          <div className="animate-fade-in animate-delay-2 text-center">
             <h1
               className="glitch-text text-xl md:text-3xl font-bold tracking-wider uppercase"
               data-text="Ian C. Ramírez Rivera"
@@ -252,26 +250,25 @@ export default function App() {
             </h1>
           </div>
 
-          {/* Title */}
-          <div className="animate-fade-in animate-delay-3 mb-0.5 text-center">
+          <div className="animate-fade-in animate-delay-3 text-center">
             <p
               className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
               Performance Marketing
             </p>
-          </div>
-          <div className="animate-fade-in animate-delay-4 mb-2 md:mb-6 text-center">
             <p
-              className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
+              className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50 mt-0.5"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
               & Revenue Operations
             </p>
           </div>
+        </div>
 
-          {/* Divider */}
-          <div className="animate-fade-in animate-delay-4 w-full mb-2 md:mb-6 corruption-border">
+        {/* CENTER — Link cards */}
+        <div className="flex-1 flex flex-col items-center justify-center w-full max-w-md mx-auto">
+          <div className="animate-fade-in animate-delay-4 w-full corruption-border mb-4 md:mb-6">
             <div className="flex items-center gap-3">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <div className="flex gap-1">
@@ -290,8 +287,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Links */}
-          <div className="w-full space-y-1.5 md:space-y-3">
+          <div className="w-full space-y-2 md:space-y-3">
             {links.map((link, i) => (
               <a
                 key={link.url}
@@ -319,35 +315,18 @@ export default function App() {
               </a>
             ))}
           </div>
-
-          {/* MarTech status */}
-          <div className="animate-fade-in animate-delay-8 mt-2 md:mt-8 text-center">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              {[...Array(7)].map((_, i) => (
-                <div
-                  key={i}
-                  className="bg-white/20"
-                  style={{
-                    width: `${Math.random() * 12 + 4}px`,
-                    height: '1px',
-                    opacity: Math.random() * 0.5 + 0.1,
-                  }}
-                />
-              ))}
-            </div>
-            <p
-              className="text-[10px] tracking-[0.4em] uppercase text-white/15"
-              style={{ fontFamily: 'var(--font-mono)' }}
-            >
-              MarTech//ACTIVE
-            </p>
-          </div>
         </div>
 
-        {/* Bottom text — pinned to viewport bottom */}
-        <div className="animate-fade-in animate-delay-8 w-full max-w-md mx-auto overflow-hidden opacity-10 pb-1">
+        {/* BOTTOM — Status + binary text */}
+        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-3 pb-4">
           <p
-            className="text-[8px] tracking-widest text-white/40 text-center whitespace-nowrap"
+            className="animate-fade-in animate-delay-8 text-[10px] tracking-[0.4em] uppercase text-white/15 text-center"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            MarTech//ACTIVE
+          </p>
+          <p
+            className="animate-fade-in animate-delay-8 text-[8px] tracking-widest text-white/[0.06] text-center whitespace-nowrap"
             style={{ fontFamily: 'var(--font-mono)' }}
           >
             01001001 01000001 01001110 ░░▒▓█ TECHIE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓

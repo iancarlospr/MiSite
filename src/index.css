@@ -21,8 +21,8 @@
     background: #000;
     color: #fff;
     font-family: var(--font-sans);
-    overflow-x: hidden;
-    min-height: 100vh;
+    overflow: hidden;
+    height: 100dvh;
   }
 
   ::selection {
@@ -72,15 +72,15 @@
   /* ===== PROFILE IMAGE ===== */
   .profile-container {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 104px;
+    height: 104px;
     margin: 0 auto;
   }
 
   @media (min-width: 768px) {
     .profile-container {
-      width: 130px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
     }
   }
 
@@ -174,9 +174,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
-    padding: 8px 14px;
+    padding: 11px 16px;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 2px;
