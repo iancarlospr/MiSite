@@ -15,7 +15,7 @@ const GlobeIcon = () => (
 );
 
 const GhostIcon = () => (
-  <svg viewBox="0 0 16 16" fill="currentColor" width="20" height="20">
+  <svg viewBox="0 0 16 16" fill="currentColor" width="24" height="24">
     <path d="M8 1C5.2 1 3 3.2 3 6v6l1-1.5 1 1.5 1-1.5 1 1.5 1-1.5 1 1.5 1-1.5 1 1.5V6c0-2.8-2.2-5-5-5z"/>
     <circle cx="6" cy="5.5" r="1" fill="#000"/>
     <circle cx="10" cy="5.5" r="1" fill="#000"/>
@@ -213,12 +213,13 @@ export default function App() {
       <GlitchCanvas />
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center h-dvh px-6 py-4">
-        <div className="w-full max-w-md mx-auto flex flex-col items-center">
+      <main className="relative z-10 flex flex-col h-dvh px-6 py-4">
+        {/* Center group — profile, name, links */}
+        <div className="flex-1 flex flex-col items-center justify-center w-full max-w-md mx-auto">
 
           {/* Profile Image Section */}
           <div
-            className={`profile-container mb-4 md:mb-6 transition-all duration-1000 ${
+            className={`profile-container mb-2 md:mb-6 transition-all duration-1000 ${
               loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -252,7 +253,7 @@ export default function App() {
           </div>
 
           {/* Title */}
-          <div className="animate-fade-in animate-delay-3 mb-1 text-center">
+          <div className="animate-fade-in animate-delay-3 mb-0.5 text-center">
             <p
               className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
               style={{ fontFamily: 'var(--font-mono)' }}
@@ -260,7 +261,7 @@ export default function App() {
               Performance Marketing
             </p>
           </div>
-          <div className="animate-fade-in animate-delay-4 mb-4 md:mb-6 text-center">
+          <div className="animate-fade-in animate-delay-4 mb-2 md:mb-6 text-center">
             <p
               className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
               style={{ fontFamily: 'var(--font-mono)' }}
@@ -270,7 +271,7 @@ export default function App() {
           </div>
 
           {/* Divider */}
-          <div className="animate-fade-in animate-delay-4 w-full mb-4 md:mb-6 corruption-border">
+          <div className="animate-fade-in animate-delay-4 w-full mb-2 md:mb-6 corruption-border">
             <div className="flex items-center gap-3">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <div className="flex gap-1">
@@ -290,7 +291,7 @@ export default function App() {
           </div>
 
           {/* Links */}
-          <div className="w-full space-y-2 md:space-y-3">
+          <div className="w-full space-y-1.5 md:space-y-3">
             {links.map((link, i) => (
               <a
                 key={link.url}
@@ -319,8 +320,8 @@ export default function App() {
             ))}
           </div>
 
-          {/* Bottom section */}
-          <div className="animate-fade-in animate-delay-8 mt-6 md:mt-10 text-center">
+          {/* MarTech status */}
+          <div className="animate-fade-in animate-delay-8 mt-2 md:mt-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               {[...Array(7)].map((_, i) => (
                 <div
@@ -341,16 +342,16 @@ export default function App() {
               MarTech//ACTIVE
             </p>
           </div>
+        </div>
 
-          {/* Matrix data fragments at bottom */}
-          <div className="mt-4 md:mt-6 w-full overflow-hidden opacity-10">
-            <p
-              className="text-[8px] tracking-widest text-white/40 text-center whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-mono)' }}
-            >
-              01001001 01000001 01001110 ░░▒▓█ TECHIE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓
-            </p>
-          </div>
+        {/* Bottom text — pinned to viewport bottom */}
+        <div className="animate-fade-in animate-delay-8 w-full max-w-md mx-auto overflow-hidden opacity-10 pb-1">
+          <p
+            className="text-[8px] tracking-widest text-white/40 text-center whitespace-nowrap"
+            style={{ fontFamily: 'var(--font-mono)' }}
+          >
+            01001001 01000001 01001110 ░░▒▓█ TECHIE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓
+          </p>
         </div>
       </main>
     </div>
