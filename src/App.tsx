@@ -201,6 +201,13 @@ export default function App() {
 
   useEffect(() => {
     setLoaded(true);
+
+    console.log(
+      '%c👀 Hey! Look at you, inspecting my code...\n%cHire me already! 🚀\n%chttps://www.linkedin.com/in/iancarlospr/',
+      'font-size: 18px; font-weight: bold; color: #fff; text-shadow: 0 0 5px rgba(255,255,255,0.5);',
+      'font-size: 14px; color: #aaa; margin-top: 4px;',
+      'font-size: 12px; color: #666;'
+    );
   }, []);
 
   return (
@@ -216,9 +223,9 @@ export default function App() {
       <main className="relative z-10 flex flex-col h-dvh px-6">
 
         {/* TOP — Profile, name, headline */}
-        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-4 md:gap-5 pt-8 md:pt-12">
+        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-3 md:gap-4 pt-8 md:pt-12">
           <div
-            className={`profile-container transition-all duration-1000 ${
+            className={`profile-container mb-4 md:mb-6 transition-all duration-1000 ${
               loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
