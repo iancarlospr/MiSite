@@ -14,14 +14,11 @@ const GlobeIcon = () => (
   </svg>
 );
 
-const ChartIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20">
-    <path d="M3 3v18h18" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M7 16l4-4 4 2 5-6" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="20" cy="8" r="1.5" fill="currentColor" stroke="none"/>
-    <circle cx="15" cy="14" r="1.5" fill="currentColor" stroke="none"/>
-    <circle cx="11" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-    <circle cx="7" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+const GhostIcon = () => (
+  <svg viewBox="0 0 16 16" fill="currentColor" width="20" height="20">
+    <path d="M8 1C5.2 1 3 3.2 3 6v6l1-1.5 1 1.5 1-1.5 1 1.5 1-1.5 1 1.5 1-1.5 1 1.5V6c0-2.8-2.2-5-5-5z"/>
+    <circle cx="6" cy="5.5" r="1" fill="#000"/>
+    <circle cx="10" cy="5.5" r="1" fill="#000"/>
   </svg>
 );
 
@@ -181,7 +178,7 @@ const links = [
   {
     label: 'MarketingAlphaScan',
     url: 'https://marketingalphascan.com/',
-    icon: <ChartIcon />,
+    icon: <GhostIcon />,
     sub: 'Skill Showcase Project',
   },
   {
