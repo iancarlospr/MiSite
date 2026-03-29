@@ -185,7 +185,7 @@ const links = [
     label: 'Personal Website',
     url: 'https://iancarlospr.github.io/rrg22agency/',
     icon: <GlobeIcon />,
-    sub: 'Portfolio & Work',
+    sub: 'Portfolio & Case Studies',
   },
   {
     label: 'GitHub Page',
