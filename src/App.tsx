@@ -207,7 +207,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative h-screen bg-black text-white overflow-hidden">
+    <div className="relative h-dvh bg-black text-white overflow-hidden">
       {/* Background layers */}
       <div className="noise-bg animate-noise" />
       <div className="dot-matrix" />
@@ -216,12 +216,12 @@ export default function App() {
       <GlitchCanvas />
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center justify-center h-screen px-6 py-6">
+      <main className="relative z-10 flex flex-col items-center justify-center h-dvh px-6 py-4">
         <div className="w-full max-w-md mx-auto flex flex-col items-center">
 
           {/* Profile Image Section */}
           <div
-            className={`profile-container mb-8 transition-all duration-1000 ${
+            className={`profile-container mb-4 md:mb-6 transition-all duration-1000 ${
               loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -244,9 +244,9 @@ export default function App() {
           </div>
 
           {/* Name */}
-          <div className="animate-fade-in animate-delay-2 mb-2 text-center">
+          <div className="animate-fade-in animate-delay-2 mb-1 text-center">
             <h1
-              className="glitch-text text-2xl md:text-3xl font-bold tracking-wider uppercase"
+              className="glitch-text text-xl md:text-3xl font-bold tracking-wider uppercase"
               data-text="Ian C. Ramírez Rivera"
               style={{ fontFamily: 'var(--font-sans)' }}
             >
@@ -255,17 +255,17 @@ export default function App() {
           </div>
 
           {/* Title */}
-          <div className="animate-fade-in animate-delay-3 mb-2 text-center">
+          <div className="animate-fade-in animate-delay-3 mb-1 text-center">
             <p
-              className="text-xs md:text-sm tracking-[0.3em] uppercase text-white/50"
+              className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
               Performance Marketing
             </p>
           </div>
-          <div className="animate-fade-in animate-delay-4 mb-8 text-center">
+          <div className="animate-fade-in animate-delay-4 mb-4 md:mb-6 text-center">
             <p
-              className="text-xs md:text-sm tracking-[0.3em] uppercase text-white/50"
+              className="text-[10px] md:text-sm tracking-[0.3em] uppercase text-white/50"
               style={{ fontFamily: 'var(--font-mono)' }}
             >
               & Revenue Operations
@@ -273,7 +273,7 @@ export default function App() {
           </div>
 
           {/* Divider */}
-          <div className="animate-fade-in animate-delay-4 w-full mb-8 corruption-border">
+          <div className="animate-fade-in animate-delay-4 w-full mb-4 md:mb-6 corruption-border">
             <div className="flex items-center gap-3">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <div className="flex gap-1">
@@ -293,7 +293,7 @@ export default function App() {
           </div>
 
           {/* Links */}
-          <div className="w-full space-y-3">
+          <div className="w-full space-y-2 md:space-y-3">
             {links.map((link, i) => (
               <a
                 key={link.url}
@@ -323,8 +323,8 @@ export default function App() {
           </div>
 
           {/* Bottom section */}
-          <div className="animate-fade-in animate-delay-8 mt-12 text-center">
-            <div className="flex items-center justify-center gap-2 mb-3">
+          <div className="animate-fade-in animate-delay-8 mt-6 md:mt-10 text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
               {[...Array(7)].map((_, i) => (
                 <div
                   key={i}
@@ -346,7 +346,7 @@ export default function App() {
           </div>
 
           {/* Matrix data fragments at bottom */}
-          <div className="mt-8 w-full overflow-hidden opacity-10">
+          <div className="mt-4 md:mt-6 w-full overflow-hidden opacity-10">
             <p
               className="text-[8px] tracking-widest text-white/40 text-center whitespace-nowrap"
               style={{ fontFamily: 'var(--font-mono)' }}
