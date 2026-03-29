@@ -216,7 +216,7 @@ export default function App() {
       <main className="relative z-10 flex flex-col h-dvh px-6">
 
         {/* TOP — Profile, name, headline */}
-        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-3 md:gap-4 pt-8 md:pt-12">
+        <div className="w-full max-w-md mx-auto flex flex-col items-center gap-4 md:gap-5 pt-8 md:pt-12">
           <div
             className={`profile-container transition-all duration-1000 ${
               loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
@@ -326,7 +326,7 @@ export default function App() {
             MarTech//ACTIVE
           </p>
           <p
-            className="animate-fade-in animate-delay-8 text-[8px] tracking-widest text-white/[0.06] text-center whitespace-nowrap"
+            className="animate-fade-in animate-delay-8 text-[8px] tracking-widest text-white/[0.03] text-center whitespace-nowrap"
             style={{ fontFamily: 'var(--font-mono)' }}
           >
             01001001 01000001 01001110 ░░▒▓█ TECHIE.ACTIVE ░░ REV.OPS ▓▒░░ MKTG.SYS ░░▒▓
